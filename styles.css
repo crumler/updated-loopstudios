@@ -50,6 +50,8 @@ img {
 
 picture { margin-inline: auto; }
 
+picture img { width: 100%; }
+
 /* ----- Frontend Mentor-specific Stylings ----- */
 .attribution { font-size: 11px; text-align: center; margin: 0.5rem 0}
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -167,7 +169,11 @@ section { padding-top: 6.4rem; }
   cursor: pointer;
 }
 
-/* .nav__menu--item:last-child { margin-bottom: 0; } */
+.nav__menu--item:hover {
+  border-bottom: 2px solid var(--clr-light);
+}
+
+.nav__menu--item:last-child { margin: 0; }
 
 /* ----- Leader in VR section ----- */
 .interactive-container {
