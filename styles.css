@@ -246,6 +246,7 @@ section { padding-top: 6.4rem; }
   border: 1px solid var(--clr-dark);
   margin-inline: auto;
   margin-bottom: 6.4rem;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .btn:hover {
@@ -342,6 +343,7 @@ section { padding-top: 6.4rem; }
 
   .nav__menu--item.uppercase:last-child { margin-right: 0; }
 
+  .creations { margin-bottom: 12.267rem; }
 
   .creations > .flex {
     display: flex;
@@ -371,10 +373,23 @@ section { padding-top: 6.4rem; }
     margin-bottom: 0;
   }
 
-  .creation-container::after {
-    background: linear-gradient(270deg, transparent 40%, #000b);
-    height: 99%;
+  .creation-container:hover {
+    cursor: pointer;
   }
+
+  .creation-container:hover picture {
+    background: none;
+    opacity: 0.25;
+  }
+
+  .creation-container:hover p {
+    color: var(--clr-dark);
+  }
+
+  /* .creation-container::after {
+    background: linear-gradient(270deg, transparent 40%, #000b);
+    height: 100%;
+  } */
 
   /* .creation_title {
     position: static;
