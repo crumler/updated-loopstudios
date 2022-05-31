@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+/* ==================== */
+/* CUSTOM PROPERTIES    */
+/* ==================== */
+
+:root {
+  /* ----- Colors ----- */
+
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-dark: hsl(0, 0%, 0%);
+  --clr-accent: hsl(0, 0%, 55%);
+  --clr-dark-accent: hsl(0, 0%, 41%);
+
+  /* ----- Typography ----- */
+
+  --ff-primary: 'Josefin Sans', sans-serif;
+  --ff-secondary: 'Alata', sans-serif;
+
+  --fs-900: 2.667rem;
+  --fs-800: 2.133rem;
+  --fs-700: 1.6rem;
+  --l-lh: 1.667rem;
+}
+
+/* ==================== */
+/* RESETS               */
+/* ==================== */
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==================== */
+/* GLOBAL               */
+/* ==================== */
+
+html {
+  font-family: var(--ff-primary);
+  font-size: 15px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+picture { margin-inline: auto; }
+
+/* ----- Frontend Mentor-specific Stylings ----- */
+.attribution { font-size: 11px; text-align: center; margin: 0.5rem 0}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ==================== */
+/* UTILITIES            */
+/* ==================== */
+
+/* ----- Typography ----- */
+
+.ff-secondary { font-family: var(--ff-secondary); }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+
+.uppercase { text-transform: uppercase; }
+
+.bold { font-weight: bold; }
+
+.text-center { text-align: center; }
+
+.l-line-height { line-height: var(--l-lh); }
+
+/* ----- Colors ----- */
+
+.text-light { color: var(--clr-light); }
+.text-dark { color: var(--clr-dark); }
+.text-accent { color: var(--clr-accent); }
+
+.bg-light { background-color: var(--clr-light); }
+.bg-dark { background-color: var(--clr-dark); }
+
+/* ----- Layout ----- */
+
+.container {
+  width: 87%;
+	max-width: 1110px;
+	margin-inline: auto;
+}
+
+.flex { display: flex; }
+
+.grid-center-item {
+  display: grid;
+  justify-items: center;
+}
+
+section { padding-top: 6.4rem; }
+
+/* ==================== */
+/* MAIN                 */
+/* ==================== */
+
+/* ----- Header Section ----- */
+
+.hero {
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+}
+
+.hero__title--container {
+  height: 70vh;
+  align-items: center;
+}
+
+.hero__title {
+  text-transform: uppercase;
+  padding: 1.6rem;
+  border: 3px solid var(--clr-light);
+}
+
+/* ----- Navigation Bar ----- */
+
+.navbar {
+  padding-top: 2.667rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo_container,
+.hamburger_menu_container,
+.close_hamburger_container {
+  z-index: 100;
+}
+
+.nav__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.6rem;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-dark);
+  transition: 0.3s;
+}
+
+.nav__menu.active { left: 0; }
+
+.hamburger_menu_container.hidden { display: none; }
+
+.close_hamburger_container { display: none; }
+
+.close_hamburger_container.active { display: block; }
+
+.nav__menu--item {
+  margin-bottom: 1.6rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* .nav__menu--item:last-child { margin-bottom: 0; } */
+
+/* ----- Leader in VR section ----- */
+.interactive-container {
+  flex-direction: column;
+}
+
+
+
+.interactive__text__container {
+  width: 83%;
+	max-width: 1110px;
+	margin-inline: auto;
+}
+
+.interactive__text {
+  margin-top: 3.2rem;
+}
+
+.interactive__text--description {
+  margin-top: 1.067rem;
+}
+
+/* ----- Our Creations section ------ */
+.creations {
+  flex-direction: column;
+  align-items: center;
+}
+
+.creations > .flex { display: initial; }
+
+.creations__heading {
+  margin-bottom: 3.2rem;
+}
+
+.creation-container {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+.creation-container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.601863) 100%);
+}
+
+.creation-container:last-child { margin-bottom: 0; }
+
+.creation_title {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 1.5rem;
+  z-index: 101;
+  width: 40%;
+}
+
+/* To ensure that "The Grid" text is on two separate lines */
+.creation_title--grid { width: 10%; }
+
+/* To prevent "From up above vr" from being on three lines */
+.from_up_title { width: 60%; }
+
+.btn {
+  display: block;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  width: 50%;
+  padding: 0.5em 0.5em;
+  border: 1px solid var(--clr-dark);
+  margin-inline: auto;
+  margin-bottom: 6.4rem;
+}
+
+#btn--desktop { display: none; }
+
+#btn--mobile { margin-top: 2.267rem;}
+
+/* ----- Footer ----- */
+
+.footer_logo {
+  width: auto;
+  margin: 3.733rem 0 2.133rem 0;
+}
+
+.footer_list_item {
+  list-style: none;
+  margin-bottom: 1.067rem;
+}
+
+.footer_list_item:last-child { margin-bottom: 3.2rem; }
+
+.social-logos-container {
+  display: flex;
+}
+
+.social_logo { margin-right: 1.067rem; }
+
+.social_logo:last-child { margin-right: 0; }
+
+.copyright {
+  margin: 1.067rem 0 3.733rem 0;
+}
+
+/* ----- Media Queries ----- */
+
+@media (min-width: 768px) {
+
+  .hero { min-height: 50vh; }
+}
+
+@media (min-width: 900px) {
+     /* ----- Hero section ----- */
+    #hero--container {
+      margin-inline: none;
+    }
+
+     .hero__title--container {
+      width: 60%;
+      justify-content: flex-start;
+    }
+
+    /* ----- Navbar ----- */
+  .hamburger_menu_container,
+  .close_hamburger_container { display: none; }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav__menu {
+    position: inherit;
+    left: inherit;
+    height: inherit;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: inherit;
+    text-transform: capitalize;
+  }
+
+  .nav__menu--item:last-child { margin-bottom: 0; }
+
+  .nav__menu--item:hover {
+    border-bottom: 1px solid var(--clr-light);
+  }
+
+  .nav__menu.fs-800 { font-size: 1rem; }
+
+  .nav__menu--item.uppercase {
+    text-transform: none;
+    margin-right: 2.133rem;
+  }
+
+  .nav__menu--item.uppercase:last-child { margin-right: 0; }
+
+
+
+  .creations > .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #btn--desktop {
+    display: inline;
+    width: 10.467rem;
+    height: 2.667rem;
+    margin-inline: 0;
+    margin-bottom: 0;
+  }
+
+  #btn--mobile { display: none; }
+
+  .creation-grid-container {
+    display: grid;
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .creation-container { 
+    margin-bottom: 0;
+  }
+
+  .creation-container::after {
+    background: linear-gradient(270deg, transparent 40%, #000b);
+    height: 99%;
+  }
+
+  /* .creation_title {
+    position: static;
+    bottom: initial;
+    left: initial;
+    font-size: 1.5rem;
+    z-index: 101;
+    width: 40%;
+  } */
+
+}
+
+@media (min-width: 1200px) {
+
+  :root {
+    --fs-800: 3.2rem;
+  }
+
+  .hero {
+    background-image: url(./images/desktop/image-hero.jpg);
+  }
+
+}
+
+@media (min-width: 1440px) {
+      /* ----- Interactive section ----- */
+
+    /* ----- Interactive section ----- */
+  
+    .interactive-container {
+      position: relative;
+    }
+
+    .interactive__text__container {
+      /* width: 20%; */
+      /* max-width: 1110px; */
+    }
+  
+    .interactive__text {
+      position: absolute;
+      padding: 96px 0 0 96px;
+      right: 0%;
+      bottom: 0%;
+      background-color: var(--clr-light);
+      width: 46%;
+    }
+  
+    .interactive__text--heading,
+    .interactive__text--description { text-align: left; }
+}
