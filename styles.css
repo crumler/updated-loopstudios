@@ -169,10 +169,6 @@ section { padding-top: 6.4rem; }
   cursor: pointer;
 }
 
-.nav__menu--item:hover {
-  border-bottom: 2px solid var(--clr-light);
-}
-
 .nav__menu--item:last-child { margin: 0; }
 
 /* ----- Leader in VR section ----- */
@@ -252,6 +248,12 @@ section { padding-top: 6.4rem; }
   margin-bottom: 6.4rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
 #btn--desktop { display: none; }
 
 #btn--mobile { margin-top: 2.267rem;}
@@ -309,19 +311,26 @@ section { padding-top: 6.4rem; }
   }
 
   .nav__menu {
-    position: inherit;
+    position: static;
+    display: flex;
+    font-family: var(--ff-secondary);
     left: inherit;
     height: inherit;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     background-color: inherit;
     text-transform: capitalize;
   }
 
-  .nav__menu--item:last-child { margin-bottom: 0; }
+  .nav__menu--item {
+    border-bottom: 2px solid transparent;
+    margin: 0;
+    padding-bottom: 0.533rem;
+  }
 
   .nav__menu--item:hover {
-    border-bottom: 1px solid var(--clr-light);
+    border-color: var(--clr-light);
   }
 
   .nav__menu.fs-800 { font-size: 1rem; }
@@ -332,7 +341,6 @@ section { padding-top: 6.4rem; }
   }
 
   .nav__menu--item.uppercase:last-child { margin-right: 0; }
-
 
 
   .creations > .flex {
