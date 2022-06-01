@@ -337,6 +337,8 @@ section { padding-top: 6.4rem; }
 
   .nav__menu--item.uppercase:last-child { margin-right: 0; }
 
+  /* ----- Creations section */
+
   .creations { margin-bottom: 12.267rem; }
 
   .creations > .flex {
