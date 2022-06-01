@@ -21,14 +21,3 @@ function closeMobileMenu() {
   navMenu.classList.toggle('active');
   closeHamburger.classList.toggle('active');
 };
-
-// REMOVING 'UPPERCASE' CSS CLASS VIA MEDIA QUERY
-
-const uppercase = document.querySelectorAll('.nav__menu--item');
-const mediaQuery = window.matchMedia('(min-width: 1200px)');
-
-// uppercase.forEach((element) => {
-//   if (mediaQuery.matches) {
-//     element.classList.remove('uppercase');
-//   }
-// });
