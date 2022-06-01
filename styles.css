@@ -213,7 +213,6 @@ section { padding-top: 6.4rem; }
   position: absolute;
   bottom: 20px;
   left: 24px;
-  font-size: 1.5rem;
   z-index: 101;
   width: 40%;
 }
@@ -411,6 +410,12 @@ section { padding-top: 6.4rem; }
 
 @media (min-width: 1440px) {
 
+  :root {
+    --fs-900: 4.8rem;
+    --fs-800: 3.2rem;
+    --fs-700: 2.133rem;
+  }
+
     /* ----- Interactive section ----- */
   
     .interactive-container { position: relative; }
@@ -418,7 +423,7 @@ section { padding-top: 6.4rem; }
     .interactive__text {
       position: absolute;
       padding: 96px 0 0 96px;
-      right: 0%;
+      right: -15%;
       bottom: 0%;
       background-color: var(--clr-light);
       width: 46%;
@@ -426,4 +431,7 @@ section { padding-top: 6.4rem; }
   
     .interactive__text--heading,
     .interactive__text--description { text-align: left; }
+
+    /* To get 'Soccer Team VR' on two lines, instead of three lines */
+    .soccer_team { width: 80%; }
 }
